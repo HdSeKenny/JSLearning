@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kenny1u/JSLearning.git"
+    "url": "git+https://github.com/Za1za1/JSLearning.git"
   },
   "keywords": [
     "js"
@@ -15,9 +15,9 @@
   "author": "Kenny",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Kenny1u/JSLearning/issues"
+    "url": "https://github.com/Za1za1/JSLearning/issues"
   },
-  "homepage": "https://github.com/Kenny1u/JSLearning#readme",
+  "homepage": "https://github.com/Za1za1/JSLearning#readme",
   "dependencies": {
     "express": "^4.14.0"
   }
