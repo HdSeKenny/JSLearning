@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Kenny1u/JSLearning/issues"
   },
-  "homepage": "https://github.com/Kenny1u/JSLearning#readme"
+  "homepage": "https://github.com/Kenny1u/JSLearning#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
