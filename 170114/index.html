@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>blog</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+  <header class="nav">
+    <div class="nav-brand">
+      <li class=""><a href="">Kenny's Blog</a></li>
+    </div>
+    <div class="nav-right">
+      <li><a href="#" class="right-image"><img src="img/hhh.jpeg"></a>
+        <ul class="dropdown">
+          <li><a href="">111</a></li>
+          <li><a href="">222</a></li>
+          <li><a href="">333</a></li>
+        </ul>
+      </li>
+    </div>
+  </header>
+  <section class="content">
+    <div class="blog">
+      <div class="title">
+        <P>What happened today, Write a blog here!</P>
+        <p id="words"></p>
+      </div>
+      <textarea id="content" rows="6" type="text" name="blog" onkeydown="Change()"></textarea>
+      <div class="footer-btns">
+        <button type="submit" onclick="Create()"> Create</button>
+        <button type="submit" onclick="Move()"> Move</button>
+      </div>
+    </div>
+    <div class="introduce">
+      <li>
+        <img src="img/hhh.jpeg">
+      </li>
+      <li>
+        <h1>Kenny</h1>
+        <p>Web Developer</p>
+      </li>
+      <ul class="fans">
+        <li>2 Blogs</li>
+        <li>1 Fans</li>
+        <li>0 Focuses</li>
+      </ul>
+    </div>
+  </section>
+  <section class="show">
+    <div id="show">
+    </div>
+  </section>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>blog</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <li><a href="#">Kenny's Blog</a></li>
+      </div>
+      <div class="user-dropdown">
+        <li><a href="#"><img src="img/hhh.jpeg"></a>
+          <ul class="dropdown-content">
+            <li><a href="">个人信息</a></li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </header>
+  <section class="content">
+    <div class="blog">
+      <div class="title">
+        <p>What happened today, Write a blog here!</p>
+        <p id="words"></p>
+      </div>
+      <textarea id="content" type="textarea" name="blog" onkeydown="Change()"></textarea>
+      <div class="submit">
+        <li>
+          <button type="submit" onclick="Create()"> Create</button>
+          <button type="submit" onclick="Move()"> Move</button>
+        </li>
+      </div>
+    </div>
+    <div class="person">
+      <div class="introduce">
+        <li>
+          <a href="#"><img src="img/hhh.jpeg"></a>
+        </li>
+        <li>
+          <p>Kenny</p>
+          <p>Web Developer</p>
+        </li>
+      </div>
+      <div class="fans">
+        <li>2 Blogs</li>
+        <li>1 Fans</li>
+        <li>0 Focuses</li>
+      </div>
+    </div>
+  </section>
+  <section class="show">
+    <div id="show">
+    </div>
+  </section>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

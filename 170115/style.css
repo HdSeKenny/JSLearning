@@ -1,0 +1,51 @@
+/* body */
+body { background: lightgrey; margin: 0; padding: 0; }
+
+/* header */
+header { background: black; height: 70px; width: 100%;}
+header > .header-content { width: 1080px; height: 70px; margin: 0 auto; background-color: black}
+header > .header-content .logo {float: left; height: 70px;}
+header > .header-content .logo > li {list-style: none; height: 70px;}
+header > .header-content .logo > li > a{text-decoration: none; font-size: 28px;color: #fff;float: left;line-height: 70px;text-align: center;}
+header > .header-content .user-dropdown { float: right; height: 70px;}
+header > .header-content .user-dropdown > li { list-style: none; height: 70px;}
+header > .header-content .user-dropdown > li > a {text-decoration: none;float: right; margin: 10px 0;}
+header > .header-content .user-dropdown > li > a > img { width: 50px; height: 50px; border-radius: 25px; }
+
+/*下拉菜单*/
+header > .header-content .user-dropdown > li > .dropdown-content { display:none; background: black; position: absolute; top: 70px; right: 150px; margin: 0; padding: 0; min-width: 200px;}
+header > .header-content .user-dropdown > li > .dropdown-content > li {list-style: none; text-align: center; padding: 15px 0; height: 30px; }
+header > .header-content .user-dropdown > li > .dropdown-content > li > a {text-decoration: none; color: gray; padding: 10px 30px;line-height: 30px;}
+header > .header-content .user-dropdown > li:hover >.dropdown-content {display: block;}
+header > .header-content .user-dropdown > li > .dropdown-content > li:hover { background-color: #337ab7; }
+header > .header-content .user-dropdown > li > .dropdown-content > li:hover a { color: #fff;}
+/*blog*/
+.content { height: 250px; margin: 30px auto; width: 1080px; }
+.content > .blog { width: 700px; background: #fff; height: 250px; float: left;}
+.content > .blog > .title > p { display: inline-block; margin: 20px 20px;}
+.content > .blog > .title >p:first-child { float: left; font-size: 18px; color: #00bfff;}
+.content > .blog > .title >p:last-child { float: right; color: grey; font-style: italic; font-size: 15px;}
+.content > .blog > textarea {width: 640px; height:100px; margin: 0 20px; padding: 10px;}
+.content > .blog > .submit >li { list-style: none; margin: 20px 20px; float: right;}
+.content > .blog > .submit > li > button {padding: 5px 25px;color: #fff; font-size: 15px;}
+.content > .blog > .submit > li > button:first-child {margin: 0 15px; background: #add8e6; }
+.content > .blog > .submit > li > button:last-child {margin: 0 auto;background: #cceeff;}
+
+
+/*person introduce*/
+.content > .person {width: 360px; height: 250px; background: #fff;float: right;}
+.content > .person > .introduce {height: 200px;}
+.content > .person > .introduce > li {list-style: none; display: inline-block; margin: 15px;float: left;}
+.content > .person > .introduce > li > a {text-decoration: none;}
+.content > .person > .introduce > li > a > img {width: 80px; height: 80px;}
+.content > .person > .introduce > li > p:first-child { color:#00bfff; font-size:20px;}
+.content > .person > .introduce > li > p:last-child { color:grey; font-size:15px;}
+.content > .person > .fans {height: 50px;  background: #00bfff;}
+.content > .person > .fans > li {list-style: none; display: inline-block;height: 50px; width: 110px; text-align: center; line-height: 3;}
+.content > .person > .fans > li:not(:last-of-type){border-right: 1px solid grey;}
+
+/*show*/
+.show {height: 200px; margin: 30px auto; width: 1080px;}
+
+
+
