@@ -14,6 +14,6 @@ if (!flag) {
   console.log(test());
 }
 
-// setInterval(()=> {
-//   console.log(new Date());
-// }, 1000)
+setInterval(()=> {
+  console.log(new Date());
+}, 1000)

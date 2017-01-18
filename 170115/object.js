@@ -1,10 +1,10 @@
-// const person = {
-//   name: "yao",
-//   age: 18,
-//   eat: () => {
+const person = {
+  name: "yao",
+  age: 18,
+  eat: () => {
 
-//   }
-// }
+  }
+}
 
 
 function Person(name, age) {
@@ -15,9 +15,9 @@ function Person(name, age) {
   }
 }
 
-// Person.prototype.eat = (name, age) => {
-//   console.log(`${name} is ${age}, ${name} is eating`)
-// };
+Person.prototype.eat = (name, age) => {
+  console.log(`${name} is ${age}, ${name} is eating`)
+};
 
 const yao = new Person('Kuan', 18);
 yao.eat();
