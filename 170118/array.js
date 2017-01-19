@@ -1,5 +1,3 @@
-const arr = [1, 2, 4, 5, 3, 2, 5];
-
 // 1. map
 // map 循环一个数组，有返回值，返回的是一个长度与原来相等的数组
 // const convetArr = (arr) => {
@@ -35,9 +33,5 @@ const arr = [1, 2, 4, 5, 3, 2, 5];
 //   return arr.findIndex(number => number === 5);
 // }
 
-Array.prototype.toString = function (argument) {
-  console.log('hello, wolrd')
-}
 
-arr.toString();
 

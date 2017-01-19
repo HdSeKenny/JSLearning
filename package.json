@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "一个傻逼要学js",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Za1za1/JSLearning.git"
@@ -19,6 +18,8 @@
   },
   "homepage": "https://github.com/Za1za1/JSLearning#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "path": "^0.12.7"
   }
 }
