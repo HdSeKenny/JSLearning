@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FormValidation</title>
+  <link rel="stylesheet" type="text/css" href="validation.css">
+</head>
+
+<body>
+  <section class="FormValidation">
+    <h1>Login</h1>
+    <input id="name" type="text" name="name" placeholder="username" onkeyup="valName()">
+    <p id="nameerror"></p>
+    <input id="password" type="password" name="password" placeholder="password" onkeyup="valPassword()">
+    <p id="passworderror"></p>
+    <input id="confirm" type="password" name="confirm" placeholder="confirm password" onkeyup="valConfirm()">
+    <p id="confirmerror"></p>
+    <input id="email" type="email" name="email" placeholder="email" onkeyup="valEmail()">
+    <p id="emailerror"></p>
+    <button name="submit">Submit</button>
+  </section>
+  <script type="text/javascript" src="validation.js"></script>
+</body>
+
+</html>
