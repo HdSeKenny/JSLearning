@@ -18,15 +18,24 @@ server.get('/text', (req, res) => {
   // When client get '/text', the server will receive the http request
   // Get the data from local files
   fs.readFile('./files/scopes.json', 'utf8', (err, data) => {
-
+    if (err) {
+      throw err;
+    }
+    // else if (data.active === 'false') {
+    // 	console.log("ho");
+    //   const obj = JSON.parse(data);
+    //   console.log(obj);
+    // }
+    else
+    	const obj = JSON.parse(data);
   });
 });
 
 server.post('/validate', (req, res) => {
   // put your code here
+
 })
 
 server.listen(config.port, () => {
   console.log(`Application is running at ${config.port}`);
 });
-
