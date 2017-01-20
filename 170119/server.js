@@ -16,7 +16,10 @@ server.route('/')
 
 server.get('/text', (req, res) => {
   // When client get '/text', the server will receive the http request
-  // put your code here
+  // Get the data from local files
+  fs.readFile('./files/scopes.json', 'utf8', (err, data) => {
+
+  });
 });
 
 server.post('/validate', (req, res) => {
@@ -27,9 +30,3 @@ server.listen(config.port, () => {
   console.log(`Application is running at ${config.port}`);
 });
 
-
-// Get the data from local files
-// fs.readFile(fileName 'utf8', (err, data) => {
-//   if (err) throw err;
-//   res.status(200).json(data);
-// });

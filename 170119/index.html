@@ -5,34 +5,51 @@
   <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/css/index.css">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <div class="jumbotron text-center">
-    <h1>Javascript learning</h1>
-    <div class="row">
-      <div class="col-xs-3"></div>
-      <div class="col-xs-6">
-        <input type="text" name="" class="form-control">
-        <input type="password" name="" class="form-control">
-      </div>
-      <div class="col-xs-3"></div>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Javascript learning</h1>
     </div>
-    <button class="btn btn-primary"> login </button>
+    <div class="jumbotron login">
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="text" name="" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="password" name="" class="form-control">
+        </div>
+      </div>
+      <button class="btn btn-primary"> login </button>
+    </div>
+    <div class="value">
+      <div class="well">
+        <button class="btn btn-primary" onClick="get()"> Get data </button>
+      </div>
+    </div>
   </div>
+
   <script>
   const get = () => {
     $.get('/text', (data, status) => {
       // jquery get method ...
+      const arr = JSON.parse(data); // translate json data to object or array
+      arr.forEach(a => {
+        $('.value').append(`<div class="well">${a._id.value}</div>`)
+      })
     })
   }
 
   const post = () => {
     $.post('/text', (data, status) => {
-      // jquery get method ...
+      // jquery post method ...
     })
   }
   </script>
