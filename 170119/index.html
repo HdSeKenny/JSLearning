@@ -17,17 +17,21 @@
       <h1>Javascript learning</h1>
     </div>
     <div class="jumbotron login">
-      <div class="row">
-        <div class="col-xs-6">
-          <input type="text" name="" class="form-control">
+      <form class="login-form">
+        <div class="form-group has-error has-feedback">
+          <input type="text" id="username" class="form-control">
+          <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6">
+        <div class="form-group">
           <input type="password" name="" class="form-control">
+          <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
         </div>
-      </div>
-      <button class="btn btn-primary"> login </button>
+        <div class="form-group">
+          <button class="btn btn-primary login-btn">Login</button>
+        </div>
+      </form>
     </div>
     <div class="value">
       <div class="well">
@@ -35,7 +39,6 @@
       </div>
     </div>
   </div>
-
   <script>
   const get = () => {
     $.get('/text', (data, status) => {
@@ -47,11 +50,20 @@
     })
   }
 
-  const post = () => {
-    $.post('/text', (data, status) => {
-      // jquery post method ...
+  const login = (e) => {
+    e.preventDefault();
+    const username = $('#username').val();
+    $.post('/validate', {username},  (data, status) => {
+      if (data === 'ok') {
+        alert('success!');
+        window.location.href = '/home';
+      } else {
+        alert('error');
+      }
     })
   }
+
+  $('.login-btn').click(login);
   </script>
 </body>
 
