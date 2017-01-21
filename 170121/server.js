@@ -32,14 +32,19 @@ server.get('/json', (req, res) => {
 });
 
 server.post('/validate', (req, res) => {
-  if (req.body.username === user.username && req.body.password === user.password) {
-    res.status(200).json("Success");
-  } else {
-    if (req.body.username === user.username && req.body.password !== user.password) {
-      res.status(200).json('Invalid password');
+  const userObj = { user:null, msg: '' };
+  if (req.body.username === user.username) {
+    if (req.body.password === user.password) {
+      userObj.user = user;
+      userObj.msg = 'Login success!'
+      res.status(200).json(userObj);
     } else {
-      res.status(200).json('Invalid username');
+      userObj.msg = 'Invalid password';
+      res.status(200).json(userObj);
     }
+  } else {
+    userObj.msg = 'This user is not registered!';
+    res.status(200).json(userObj);
   }
 })
 
