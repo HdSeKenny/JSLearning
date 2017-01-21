@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Hello World</h1>
+      <h2 class="user"></h2>
+    </div>
+    <div class="jumbotron login">
+      <form class="login-form">
+        <div class="form-group">
+          <input type="text" id="username" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" class="form-control">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary login-btn">Login</button>
+        </div>
+      </form>
+    </div>
+    <div class="value">
+    </div>
+  </div>
+  <script>
+  const loadData = () => {
+    $.get('/data', (data, status) => {
+      if (status === 'success') {
+        $('.well').append(data);
+      }
+    })
+  }
+
+  const loadJson = () => {
+    $.get('/json', (data, status) => {
+      const arr = JSON.parse(data);
+      console.log(arr);
+      arr.forEach((a, index) => {
+        a._id = a._id.value;
+        a.dbvalues.forEach((b, index) => {
+          if (b.active === true) {
+            $('.value').append(`<div class="well"> Array: ${a._id} --dbcolumn: ${a.dbcolumn} --dbvalues: ${index}--${b.active}</div>`);
+          }
+        })
+
+      })
+    })
+  }
+  loadJson();
+
+  const login = (event) => {
+    event.preventDefault();
+    const userInfo = {
+      username: $('#username').val(),
+      password: $('#password').val()
+    }
+
+    $.post('/validate', userInfo, (data, status) => {
+      if (data === "Success") {
+        alert("success");
+        window.location.href = '/home';
+      } else if (data === "Invalid password") {
+        alert("Invalid password");
+      } else if (data === "Invalid username") {
+        alert("User is not registered");
+      }
+    })
+  }
+
+  $('.login-btn').click(login);
+  </script>
+</body>
+
+</html>

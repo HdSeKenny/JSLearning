@@ -1,0 +1,712 @@
+  [{
+    "_id": {
+      "version": 3,
+      "value": 3
+    },
+    "dbvalues": [{
+      "display_order": 0,
+      "active": true,
+      "dbvalue": "0K",
+      "code": 0,
+      "display_literal": "K"
+    }, {
+      "dbvalue": "01",
+      "code": 1,
+      "display_literal": "1",
+      "display_order": 1,
+      "active": false
+    }, {
+      "active": true,
+      "dbvalue": "02",
+      "code": 2,
+      "display_literal": "2",
+      "display_order": 2
+    }, {
+      "dbvalue": "03",
+      "code": 3,
+      "display_literal": "3",
+      "display_order": 3,
+      "active": true
+    }, {
+      "code": 4,
+      "display_literal": "4",
+      "display_order": 4,
+      "active": true,
+      "dbvalue": "04"
+    }, {
+      "display_literal": "5",
+      "display_order": 5,
+      "active": true,
+      "dbvalue": "05",
+      "code": 5
+    }, {
+      "display_order": 6,
+      "active": true,
+      "dbvalue": "06",
+      "code": 6,
+      "display_literal": "6"
+    }, {
+      "code": 7,
+      "display_literal": "7",
+      "display_order": 7,
+      "active": true,
+      "dbvalue": "07"
+    }, {
+      "display_literal": "8",
+      "display_order": 8,
+      "active": false,
+      "dbvalue": "08",
+      "code": 8
+    }, {
+      "active": true,
+      "dbvalue": "09",
+      "code": 9,
+      "display_literal": "9",
+      "display_order": 9
+    }, {
+      "dbvalue": "10",
+      "code": 10,
+      "display_literal": "10",
+      "display_order": 10,
+      "active": false
+    }, {
+      "code": 11,
+      "display_literal": "11",
+      "display_order": 11,
+      "active": true,
+      "dbvalue": "11"
+    }, {
+      "dbvalue": "12",
+      "code": 12,
+      "display_literal": "12",
+      "display_order": 12,
+      "active": true
+    }, {
+      "display_literal": "AB",
+      "display_order": 13,
+      "active": true,
+      "dbvalue": "13",
+      "code": 13
+    }, {
+      "active": true,
+      "dbvalue": "14",
+      "code": 14,
+      "display_literal": "OS",
+      "display_order": 14
+    }],
+    "dbcolumn": "grade",
+    "display_literal": "Grade"
+  }, {
+    "_id": {
+      "version": 3,
+      "value": 5
+    },
+    "dbvalues": [{
+      "code": 1,
+      "display_literal": "STAAR",
+      "display_order": 1,
+      "active": false,
+      "dbvalue": "SE"
+    }, {
+      "display_literal": "TAKS",
+      "display_order": 1,
+      "active": true,
+      "dbvalue": "KE",
+      "code": 10
+    }, {
+      "display_order": 2,
+      "active": true,
+      "dbvalue": "KS",
+      "code": 11,
+      "display_literal": "TAKS Spanish"
+    }, {
+      "dbvalue": "SS",
+      "code": 2,
+      "display_literal": "STAAR Spanish",
+      "display_order": 2,
+      "active": true
+    }, {
+      "active": true,
+      "dbvalue": "AE",
+      "code": 3,
+      "display_literal": "STAAR A",
+      "display_order": 3
+    }, {
+      "dbvalue": "AD",
+      "code": 12,
+      "display_literal": "TAKS (Accommodated) Form",
+      "display_order": 3,
+      "active": true
+    }, {
+      "dbvalue": "AS",
+      "code": 13,
+      "display_literal": "TAKS (Accommodated) Form Spanish",
+      "display_order": 4,
+      "active": true
+    }, {
+      "display_order": 4,
+      "active": false,
+      "dbvalue": "LE",
+      "code": 4,
+      "display_literal": "STAAR L"
+    }, {
+      "code": 5,
+      "display_literal": "STAAR Alt 2",
+      "display_order": 5,
+      "active": false,
+      "dbvalue": "TE"
+    }, {
+      "dbvalue": "LD",
+      "code": 14,
+      "display_literal": "TAKS LAT",
+      "display_order": 5,
+      "active": true
+    }, {
+      "dbvalue": "LS",
+      "code": 15,
+      "display_literal": "TAKS LAT Spanish",
+      "display_order": 6,
+      "active": true
+    }, {
+      "code": 6,
+      "display_literal": "STAAR Modified",
+      "display_order": 6,
+      "active": true,
+      "dbvalue": "ME"
+    }],
+    "dbcolumn": "version",
+    "display_literal": "Version"
+  }, {
+    "_id": {
+      "version": 3,
+      "value": 1
+    },
+    "dbvalues": [{
+      "code": 314,
+      "display_order": 60,
+      "dbvalue": "1616",
+      "display_literal": "Summer 2016",
+      "active": true
+    }, {
+      "code": 313,
+      "display_order": 59,
+      "dbvalue": "0516",
+      "display_literal": "May 2016",
+      "active": true
+    }, {
+      "code": 312,
+      "display_order": 58,
+      "dbvalue": "1516",
+      "display_literal": "Spring 2016",
+      "active": false
+    }, {
+      "code": 311,
+      "display_order": 57,
+      "dbvalue": "0316",
+      "display_literal": "March 2016",
+      "active": true
+    }, {
+      "dbvalue": "1315",
+      "code": 72,
+      "display_literal": "Fall 2015",
+      "display_order": 56,
+      "active": true
+    }, {
+      "dbvalue": "1615",
+      "code": 74,
+      "display_literal": "Summer 2015",
+      "display_order": 55,
+      "active": false
+    }, {
+      "dbvalue": "0715",
+      "code": 73,
+      "display_literal": "July 2015",
+      "display_order": 54,
+      "active": true
+    }, {
+      "display_order": 53,
+      "active": true,
+      "dbvalue": "0615",
+      "code": 36,
+      "display_literal": "June 2015"
+    }, {
+      "dbvalue": "0515",
+      "code": 33,
+      "display_literal": "May 2015",
+      "display_order": 52,
+      "active": true
+    }, {
+      "display_order": 51,
+      "active": true,
+      "dbvalue": "1515",
+      "code": 70,
+      "display_literal": "Spring 2015"
+    }, {
+      "code": 1,
+      "display_literal": "April 2015",
+      "display_order": 50,
+      "active": true,
+      "dbvalue": "0415"
+    }, {
+      "dbvalue": "0315",
+      "code": 5,
+      "display_literal": "March 2015",
+      "display_order": 49,
+      "active": true
+    }, {
+      "dbvalue": "1014",
+      "code": 165,
+      "display_literal": "October 2014",
+      "display_order": 48,
+      "active": true
+    }, {
+      "display_literal": "Fall 2014",
+      "display_order": 47,
+      "active": true,
+      "dbvalue": "1314",
+      "code": 62
+    }, {
+      "display_order": 46,
+      "active": true,
+      "dbvalue": "1614",
+      "code": 61,
+      "display_literal": "Summer 2014"
+    }, {
+      "dbvalue": "0714",
+      "code": 164,
+      "display_literal": "July 2014",
+      "display_order": 45,
+      "active": true
+    }, {
+      "active": true,
+      "dbvalue": "0614",
+      "code": 35,
+      "display_literal": "June 2014",
+      "display_order": 44
+    }, {
+      "dbvalue": "0514",
+      "code": 32,
+      "display_literal": "May 2014",
+      "display_order": 43,
+      "active": false
+    }, {
+      "dbvalue": "1514",
+      "code": 60,
+      "display_literal": "Spring 2014",
+      "display_order": 42,
+      "active": true
+    }, {
+      "dbvalue": "0414",
+      "code": 30,
+      "display_literal": "April 2014",
+      "display_order": 41,
+      "active": true
+    }, {
+      "dbvalue": "0314",
+      "code": 4,
+      "display_literal": "March 2014",
+      "display_order": 40,
+      "active": true
+    }, {
+      "code": 155,
+      "display_literal": "October 2013",
+      "display_order": 39,
+      "active": false,
+      "dbvalue": "1013"
+    }, {
+      "dbvalue": "1313",
+      "code": 52,
+      "display_literal": "Fall 2013",
+      "display_order": 38,
+      "active": true
+    }, {
+      "dbvalue": "1012",
+      "code": 145,
+      "display_literal": "October 2012",
+      "display_order": 37,
+      "active": true
+    }, {
+      "dbvalue": "1613",
+      "code": 51,
+      "display_literal": "Summer 2013",
+      "display_order": 36,
+      "active": true
+    }, {
+      "dbvalue": "0713",
+      "code": 154,
+      "display_literal": "July 2013",
+      "display_order": 35,
+      "active": false
+    }, {
+      "dbvalue": "0613",
+      "code": 34,
+      "display_literal": "June 2013",
+      "display_order": 34,
+      "active": true
+    }, {
+      "dbvalue": "0513",
+      "code": 310,
+      "display_literal": "May 2013",
+      "display_order": 33,
+      "active": true
+    }, {
+      "display_literal": "Spring 2013",
+      "display_order": 32,
+      "active": true,
+      "dbvalue": "1513",
+      "code": 50
+    }, {
+      "active": true,
+      "dbvalue": "0413",
+      "code": 37,
+      "display_literal": "April 2013",
+      "display_order": 31
+    }, {
+      "dbvalue": "0313",
+      "code": 3,
+      "display_literal": "March 2013",
+      "display_order": 30,
+      "active": true
+    }, {
+      "code": 42,
+      "display_literal": "Fall 2012",
+      "display_order": 29,
+      "active": true,
+      "dbvalue": "1312"
+    }, {
+      "dbvalue": "1612",
+      "code": 41,
+      "display_literal": "Summer 2012",
+      "display_order": 28,
+      "active": false
+    }, {
+      "dbvalue": "0712",
+      "code": 144,
+      "display_literal": "July 2012",
+      "display_order": 27,
+      "active": true
+    }, {
+      "display_literal": "Spring 2012",
+      "display_order": 26,
+      "active": true,
+      "dbvalue": "1512",
+      "code": 40
+    }, {
+      "active": true,
+      "dbvalue": "0412",
+      "code": 31,
+      "display_literal": "April 2012",
+      "display_order": 25
+    }, {
+      "dbvalue": "0312",
+      "code": 2,
+      "display_literal": "March 2012",
+      "display_order": 24,
+      "active": true
+    }, {
+      "code": 135,
+      "display_literal": "October 2011",
+      "display_order": 23,
+      "active": true,
+      "dbvalue": "1011"
+    }, {
+      "display_literal": "July 2011",
+      "display_order": 22,
+      "active": true,
+      "dbvalue": "0711",
+      "code": 134
+    }, {
+      "active": true,
+      "dbvalue": "0611",
+      "code": 133,
+      "display_literal": "June 2011",
+      "display_order": 21
+    }, {
+      "dbvalue": "0511",
+      "code": 132,
+      "display_literal": "May 2011",
+      "display_order": 20,
+      "active": true
+    }, {
+      "dbvalue": "0411",
+      "code": 131,
+      "display_literal": "April 2011",
+      "display_order": 19,
+      "active": true
+    }, {
+      "active": true,
+      "dbvalue": "0311",
+      "code": 130,
+      "display_literal": "March 2011",
+      "display_order": 18
+    }, {
+      "dbvalue": "1010",
+      "code": 125,
+      "display_literal": "October 2010",
+      "display_order": 17,
+      "active": true
+    }, {
+      "dbvalue": "0710",
+      "code": 124,
+      "display_literal": "July 2010",
+      "display_order": 16,
+      "active": true
+    }, {
+      "dbvalue": "0610",
+      "code": 123,
+      "display_literal": "June 2010",
+      "display_order": 15,
+      "active": false
+    }, {
+      "dbvalue": "0510",
+      "code": 122,
+      "display_literal": "May 2010",
+      "display_order": 14,
+      "active": true
+    }, {
+      "dbvalue": "0410",
+      "code": 121,
+      "display_literal": "April 2010",
+      "display_order": 13,
+      "active": true
+    }, {
+      "active": true,
+      "dbvalue": "0310",
+      "code": 120,
+      "display_literal": "March 2010",
+      "display_order": 12
+    }, {
+      "dbvalue": "1009",
+      "code": 115,
+      "display_literal": "October 2009",
+      "display_order": 11,
+      "active": true
+    }, {
+      "dbvalue": "0709",
+      "code": 114,
+      "display_literal": "July 2009",
+      "display_order": 10,
+      "active": true
+    }, {
+      "active": true,
+      "dbvalue": "0609",
+      "code": 113,
+      "display_literal": "June 2009",
+      "display_order": 9
+    }, {
+      "dbvalue": "0509",
+      "code": 112,
+      "display_literal": "May 2009",
+      "display_order": 8,
+      "active": true
+    }, {
+      "dbvalue": "0409",
+      "code": 111,
+      "display_literal": "April 2009",
+      "display_order": 7,
+      "active": true
+    }, {
+      "dbvalue": "0309",
+      "code": 110,
+      "display_literal": "March 2009",
+      "display_order": 6,
+      "active": true
+    }, {
+      "active": true,
+      "dbvalue": "1008",
+      "code": 105,
+      "display_literal": "October 2008",
+      "display_order": 5
+    }, {
+      "dbvalue": "0708",
+      "code": 104,
+      "display_literal": "July 2008",
+      "display_order": 4,
+      "active": true
+    }, {
+      "dbvalue": "0508",
+      "code": 102,
+      "display_literal": "May 2008",
+      "display_order": 3,
+      "active": true
+    }, {
+      "active": true,
+      "dbvalue": "0408",
+      "code": 101,
+      "display_literal": "April 2008",
+      "display_order": 2
+    }, {
+      "dbvalue": "0308",
+      "code": 100,
+      "display_literal": "March 2008",
+      "display_order": 1,
+      "active": true
+    }],
+    "reverse_order": true,
+    "dbcolumn": "admin",
+    "display_literal": "Admin"
+  }, {
+    "_id": {
+      "version": 3,
+      "value": 4
+    },
+    "dbvalues": [{
+      "display_order": 1,
+      "active": true,
+      "dbvalue": "LI",
+      "code": 40,
+      "display_literal": "Listening"
+    }, {
+      "dbvalue": "SP",
+      "code": 41,
+      "display_literal": "Speaking",
+      "display_order": 2,
+      "active": true
+    }, {
+      "active": true,
+      "dbvalue": "RE",
+      "code": 1,
+      "display_literal": "Reading",
+      "display_order": 3
+    }, {
+      "dbvalue": "EL",
+      "code": 30,
+      "display_literal": "ELA",
+      "display_order": 4,
+      "active": true
+    }, {
+      "dbvalue": "MA",
+      "code": 2,
+      "display_literal": "Mathematics",
+      "display_order": 5,
+      "active": true
+    }, {
+      "dbvalue": "WR",
+      "code": 3,
+      "display_literal": "Writing",
+      "display_order": 6,
+      "active": true
+    }, {
+      "display_order": 7,
+      "active": true,
+      "dbvalue": "SC",
+      "code": 4,
+      "display_literal": "Science"
+    }, {
+      "code": 5,
+      "display_literal": "Social Studies",
+      "display_order": 8,
+      "active": true,
+      "dbvalue": "SO"
+    }, {
+      "dbvalue": "A1",
+      "code": 10,
+      "display_literal": "Algebra I",
+      "display_order": 10,
+      "active": true
+    }, {
+      "display_literal": "Geometry",
+      "display_order": 12,
+      "active": true,
+      "dbvalue": "GE",
+      "code": 12
+    }, {
+      "active": true,
+      "dbvalue": "A2",
+      "code": 13,
+      "display_literal": "Algebra II",
+      "display_order": 13
+    }, {
+      "dbvalue": "BI",
+      "code": 14,
+      "display_literal": "Biology I",
+      "display_order": 14,
+      "active": true
+    }, {
+      "dbvalue": "CH",
+      "code": 15,
+      "display_literal": "Chemistry",
+      "display_order": 15,
+      "active": true
+    }, {
+      "dbvalue": "PH",
+      "code": 16,
+      "display_literal": "Physics",
+      "display_order": 16,
+      "active": true
+    }, {
+      "display_order": 17,
+      "active": false,
+      "dbvalue": "E1",
+      "code": 17,
+      "display_literal": "English I"
+    }, {
+      "code": 18,
+      "display_literal": "English II",
+      "display_order": 18,
+      "active": true,
+      "dbvalue": "E2"
+    }, {
+      "display_literal": "English III",
+      "display_order": 19,
+      "active": false,
+      "dbvalue": "E3",
+      "code": 19
+    }, {
+      "active": true,
+      "dbvalue": "R1",
+      "code": 21,
+      "display_literal": "English I Reading",
+      "display_order": 21
+    }, {
+      "dbvalue": "R2",
+      "code": 22,
+      "display_literal": "English II Reading",
+      "display_order": 22,
+      "active": true
+    }, {
+      "dbvalue": "R3",
+      "code": 23,
+      "display_literal": "English III Reading",
+      "display_order": 23,
+      "active": true
+    }, {
+      "dbvalue": "W1",
+      "code": 24,
+      "display_literal": "English I Writing",
+      "display_order": 24,
+      "active": true
+    }, {
+      "code": 25,
+      "display_literal": "English II Writing",
+      "display_order": 25,
+      "active": true,
+      "dbvalue": "W2"
+    }, {
+      "dbvalue": "W3",
+      "code": 26,
+      "display_literal": "English III Writing",
+      "display_order": 26,
+      "active": true
+    }, {
+      "display_literal": "World Geography",
+      "display_order": 27,
+      "active": true,
+      "dbvalue": "WG",
+      "code": 27
+    }, {
+      "active": false,
+      "dbvalue": "WH",
+      "code": 28,
+      "display_literal": "World History",
+      "display_order": 28
+    }, {
+      "dbvalue": "US",
+      "code": 29,
+      "display_literal": "U.S. History",
+      "display_order": 29,
+      "active": true
+    }],
+    "dbcolumn": "subject",
+    "display_literal": "Subject"
+  }]

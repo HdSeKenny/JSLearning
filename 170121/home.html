@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Home page</h1>
+    </div>
+  </div>
+  <script>
+    const getUserInfo = () => {
+      $.get('/user', (data, status) => {
+        $('.text-center').append(`Welcome, ${data.username} !`);
+      })
+    }
+
+    getUserInfo();
+  </script>
+</body>
+
+</html>
