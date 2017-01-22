@@ -16,6 +16,7 @@ const loadJson = () => {
   })
 }
 
+
 const convertJsonData = (data) => {
   const stringArr = JSON.parse(data);
   // arr._id = arr._id.value;
@@ -24,13 +25,12 @@ const convertJsonData = (data) => {
     arr._id = arr._id.value;
     const newDbvalues = [];
     arr.dbvalues.forEach(value => {
-
       if (value.active === true) {
         newDbvalues.push(value);
       }
-
     })
-    return arr.dbvalues = newDbvalues;
+
+     return arr.dbvalues = newDbvalues;
   })
   return stringArr;
 }
@@ -82,5 +82,18 @@ const register = () => {
     $.post('/register', newUser, (data, status) => {
     })
   }
+}
+
+const registerUsername =() => {
+    const username = $("#newusername").val();
+    const password = $("#password").val();
+    const newUser = {
+      username, password
+    }
+    if(newUser){
+      $.post('/register',newUser, (data, status) => {
+
+      })
+    }
 }
 

@@ -58,6 +58,7 @@ server.listen(8000, (err) => {
 
 server.post('/register', (req, res) => {
   const { username, password } = req.body;
+  console.log(username, password);
   MongoClient.connect(MongoUrl, (err, db) => {
     if (err) throw err;
     const User = db.collection('users');
@@ -67,6 +68,10 @@ server.post('/register', (req, res) => {
         userObj.msg = 'This username is already exist';
         res.status(200).json(userObj);
       } else {
+        User.insertOne(req.body, (err, result) => {
+          assert.equal(err, null);
+
+        });
       }
     })
   })
