@@ -15,6 +15,27 @@ const loadJson = () => {
     })
   })
 }
+loadJson();
+
+const convertJsonData = (data) => {
+  const stringArr = JSON.parse(data); 
+  // arr._id = arr._id.value;
+  console.log(stringArr);
+  stringArr.map(arr => {
+    arr._id = arr._id.value;
+    const newDbvalues = [];
+    arr.dbvalues.forEach(value =>{
+      
+      if(value.active===true){
+        newDbvalues.push(value);
+      }
+      
+    })
+     return arr.dbvalues = newDbvalues;  
+  })
+  return stringArr;
+}
+
 
 const login = (event) => {
   event.preventDefault();
@@ -55,3 +76,18 @@ const removeSpace = (string) => {
 }
 
 console.log(removeSpace('  xx   hello world  dasda  '));
+
+
+
+const registerUsername =() => {
+    const newUsername = $("#newusername").val();
+    const password = $("#password").val();
+    const newUser = {
+      newUsername, password
+    }
+    if(newUser){
+      $.post('/register',newUser, (data, status) => {
+        
+      })
+    }
+}
