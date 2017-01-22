@@ -43,14 +43,12 @@ const removeSpace = (string) => {
         firstIndex = index;
       }
     })
-
     for (var i = stringArr.length - 1; i >= 0; i--) {
       if(stringArr[i] !== ' ') {
         lastIndex = i;
       }
     }
   }
-
   return string.substring(firstIndex, lastIndex);
 }
 
