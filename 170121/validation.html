@@ -4,7 +4,7 @@
 <head>
   <title>FormValidation</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/css/validation.css">
+  <link rel="stylesheet" type="text/css" href="css/validation.css">
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
@@ -12,17 +12,19 @@
 <body>
   <div class="jumbotron">
     <form class="FormValidation">
-      <div class="form-group col-sm-12 username">
-        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" onkeyup="valUsername()">
-        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
-        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
-        <span class="help-block"></span>
+      <div class="col-sm-6">
+        <div class="form-group username">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" onkeyup="valUsername()">
+          <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+          <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+          <span class="help-block"></span>
+        </div>
       </div>
       <div class="form-group col-sm-12 email">
         <input type="text" class="form-control"  name="email" placeholder="Enter email" onkeyup="valEmail()">
         <span class="glyphicon glyphicon-ok form-control-feedback"></span>
         <span class="glyphicon glyphicon-remove form-control-feedback"></span>
-        <p class="help-block"></p>
+        <span class="help-block"></span>
       </div>
       <div class="form-group col-sm-12 password">
         <input type="text" class="form-control" name="password" placeholder="Enter password" onkeyup="valPassword()">
@@ -38,7 +40,7 @@
       </div>
       <div class="form-group col-sm-12 submit">
         <button type="submit" class="btn btn-primary btn-block login">Login</button>
-      </div>   
+      </div>
     </form>
   </div>
   <script type="text/javascript" src="validation.js"></script>

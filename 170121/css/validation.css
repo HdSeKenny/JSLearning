@@ -21,6 +21,25 @@ body {
   margin: 10px auto;
 }
 
+
+.glyphicon.glyphicon-ok {
+  display: none;
+}
+
+.glyphicon.glyphicon-remove {
+  display: none;
+}
+
+.glyphicon.glyphicon-ok .show{
+  display: block;
+}
+
+.glyphicon.glyphicon-remove .show{
+  display: block;
+}
+
+
+
 /*.FormValidation > h1 {
   display: block;
   text-align: center;
