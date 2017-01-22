@@ -16,6 +16,26 @@ const loadJson = () => {
   })
 }
 
+const convertJsonData = (data) => {
+  const stringArr = JSON.parse(data);
+  // arr._id = arr._id.value;
+  console.log(stringArr);
+  stringArr.map(arr => {
+    arr._id = arr._id.value;
+    const newDbvalues = [];
+    arr.dbvalues.forEach(value => {
+
+      if (value.active === true) {
+        newDbvalues.push(value);
+      }
+
+    })
+    return arr.dbvalues = newDbvalues;
+  })
+  return stringArr;
+}
+
+
 const login = (event) => {
   event.preventDefault();
   const userInfo = {
@@ -30,9 +50,6 @@ const login = (event) => {
   })
 }
 
-$('.login-btn').click(login);
-
-
 const removeSpace = (string) => {
   let firstIndex = 0;
   let lastIndex = 0;
@@ -44,7 +61,7 @@ const removeSpace = (string) => {
       }
     })
     for (var i = stringArr.length - 1; i >= 0; i--) {
-      if(stringArr[i] !== ' ') {
+      if (stringArr[i] !== ' ') {
         lastIndex = i;
       }
     }
@@ -53,3 +70,17 @@ const removeSpace = (string) => {
 }
 
 console.log(removeSpace('  xx   hello world  dasda  '));
+
+const register = () => {
+  const username = $("#username").val();
+  const password = $("#password").val();
+  const newUser = {
+    username,
+    password
+  }
+  if (newUser) {
+    $.post('/register', newUser, (data, status) => {
+    })
+  }
+}
+

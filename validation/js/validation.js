@@ -18,14 +18,16 @@ const validateUsername = () => {
 
 const validateSuccess = (field) => {
   $(`.${field}`).removeClass('has-error has-feedback');
+  $(`.${field} .glyphicon-remove`).removeClass('show');
+
   $(`.${field}`).addClass('has-success has-feedback');
-  $(`.${field} .glyphicon-ok`).show();
-  $(`.${field} .glyphicon-remove`).hide();
+  $(`.${field} .glyphicon-ok`).addClass('show');
 }
 
 const validateError = (field) => {
   $(`.${field}`).removeClass('has-success has-feedback');
+  $(`.${field} .glyphicon-ok`).removeClass('show');
+
   $(`.${field}`).addClass('has-error has-feedback');
-  $(`.${field} .glyphicon-ok`).hide();
-  $(`.${field} .glyphicon-remove`).show();
+  $(`.${field} .glyphicon-remove`).addClass('show');
 }
