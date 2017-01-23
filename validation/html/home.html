@@ -15,14 +15,16 @@
     <div class="jumbotron text-center">
       <h1>Home page</h1>
     </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/validation.js"></script>
   </div>
   <script>
-    const getUserInfo = () => {
-      $.get('/user', (data, status) => {
-        $('.text-center').append(`Welcome, ${data.username} !`);
-      })
-    }
-    getUserInfo();
+  const getUserInfo = () => {
+    $.get('/user', (data, status) => {
+      $('.text-center').append(`Welcome, ${data.username} !`);
+    })
+  }
+  getUserInfo();
   </script>
 </body>
 

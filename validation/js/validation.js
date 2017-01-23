@@ -13,7 +13,61 @@ const validateUsername = () => {
     }
   }
 
-  $('.help-block').text(errorMsg);
+  $('.username .help-block').text(errorMsg);
+}
+
+
+const validateEmail = () => {
+  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const email = $('#email').val();
+  let errorMsg = '';
+  if(regex.test(email)) {
+    validateSuccess('email');
+  }
+  else {
+    validateError('email');
+    if (!email){
+      errorMsg = 'Email is required';
+    }else {
+      errorMsg = 'The format of email should be xxx@xx.com';
+    }
+  }
+  $('.email .help-block').text(errorMsg);
+}
+
+const validatePassword = () => {
+  const password = $('#password').val();
+  let errorMsg = '';
+  if (password.length > 8){
+       validateSuccess('password');
+  }
+  else {
+    validateError('password');
+    if (!password){
+      errorMsg = 'Password is required';
+    }else {
+      errorMsg = 'The length of password should be more than 8';
+    }
+  }
+  $('.password .help-block').text(errorMsg);
+}
+
+const comparePassword = () => {
+  const confirmpassword = $('#confirm').val();
+  const password = $('#password').val();
+  let errorMsg = '';
+  if (confirmpassword===password){
+    validateSuccess('confirm');
+  }
+  else {
+    validateError('confirm');
+    if(!confirmpassword){
+      errorMsg = 'Confirm password is required';
+    }else {
+      errorMsg = 'The password is different';
+    }
+  }
+  $('.confirm .help-block').text(errorMsg);
 }
 
 const validateSuccess = (field) => {

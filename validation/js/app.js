@@ -30,14 +30,14 @@ const convertJsonData = (data) => {
       }
     })
 
-     return arr.dbvalues = newDbvalues;
+    return arr.dbvalues = newDbvalues;
   })
   return stringArr;
 }
 
 
-const login = (event) => {
-  event.preventDefault();
+const login = () => {
+  // event.preventDefault();
   const userInfo = {
     username: $('#username').val(),
     password: $('#password').val()
@@ -71,29 +71,47 @@ const removeSpace = (string) => {
 
 console.log(removeSpace('  xx   hello world  dasda  '));
 
+// const register = () => {
+//   const username = $("#username").val();
+//   const password = $("#password").val();
+//   const newUser = {
+//     username,
+//     password
+//   }
+//   if (newUser) {
+//     $.post('/register', newUser, (data, status) => {
+//     })
+//   }
+// }
+
 const register = () => {
   const username = $("#username").val();
   const password = $("#password").val();
+  const email = $("#email").val();
   const newUser = {
     username,
-    password
+    password,
+    email
   }
+
   if (newUser) {
     $.post('/register', newUser, (data, status) => {
+      console.log(data);
+      if (!data.user) {
+        alert(data.msg);
+      } else {
+        // console.log(data);
+        alert(data.msg);
+        window.location.href='/home';
+      }
+
     })
   }
 }
 
-const registerUsername =() => {
-    const username = $("#newusername").val();
-    const password = $("#password").val();
-    const newUser = {
-      username, password
-    }
-    if(newUser){
-      $.post('/register',newUser, (data, status) => {
 
-      })
-    }
+const moveToLogin = () => {
+  window.location.href='/login';
 }
+
 
