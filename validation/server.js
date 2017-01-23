@@ -2,18 +2,39 @@ const express = require('express');
 const fs = require('fs'); // files system
 const path = require('path');
 const bodyParser = require('body-parser');
-const server = express();
-// const user = { username: 'Kenny', password: 'kenny' };
-
-const MongoClient = require('mongodb').MongoClient;
-const MongoUrl = 'mongodb://localhost/jslearning';
-
 const assert = require('assert');
-
+const MongoClient = require('mongodb').MongoClient;
+const configs = require('./configs');
+const logger = require('morgan');
+const session = require('express-session');
+const connectMongo = require('connect-mongo');
+const ObjectID = require('mongodb').ObjectID;
+const server = express();
 
 server.use(express.static(path.join(__dirname, '/'))) // Join static files (css/js) to server
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
+server.use(logger('dev'));
+
+// Connect session db, if session is not available, create
+// a new session db
+// MongoClient.connect(configs.session, (err, db) => {
+//   const Test = db.collection('test');
+//   Test.insertOne({ text: 'Hello World'}, (err, result) => {
+//     if (err) {
+//       console.log('Create session fail');
+//     }
+//     db.close();
+//   })
+// })
+
+const MongoStore = connectMongo(session);
+server.use(session({
+  secret: 'secret',
+  store: new MongoStore(configs.session),
+  resave: false,
+  saveUninitialized: false
+}));
 
 server.route('/')
   .get((req, res) => {
@@ -39,27 +60,24 @@ server.get('/json', (req, res) => {
 });
 
 server.get('/user', (req, res) => {
-  console.log(req.body);
-  MongoClient.connect(MongoUrl, (err, db) => {
+  MongoClient.connect(configs.mongoUri, (err, db) => {
     if (err) throw err;
     const User = db.collection('users');
-    User.find().toArray((err, user) => {
-      if (err) {
-        res.send(500);
-        return;
+    User.findOne({ _id: ObjectID(req.session.uId) }, (err, user) => {
+      if (err) throw err;
+      if (user) {
+        res.status(200).json(user);
+      } else {
+        res.sendStatus(404);
       }
-      res.status(200).json(user);
     })
-
   })
-
 });
-
 
 
 server.post('/validate', (req, res) => {
   const { username, password } = req.body;
-  MongoClient.connect(MongoUrl, (err, db) => {
+  MongoClient.connect(configs.mongoUri, (err, db) => {
     if (err) throw err;
     const User = db.collection('users');
     User.findOne({ username }, (err, user) => {
@@ -84,17 +102,15 @@ server.post('/validate', (req, res) => {
 
 })
 
-server.listen(8000, (err) => {
+server.listen(configs.serverPort, (err) => {
   if (err) {}
-  console.log('Application is running on http://localhost:8000');
+  console.log(`Application is running on http://localhost:${configs.serverPort}`);
 })
 
 
 server.post('/register', (req, res) => {
-  // const username = req.body.
   const { username, password, email } = req.body;
-  // console.log(req.body);
-  MongoClient.connect(MongoUrl, (err, db) => {
+  MongoClient.connect(configs.mongoUri, (err, db) => {
     if (err) throw err;
     const User = db.collection('users');
     User.findOne({ username }, (err, user) => {
@@ -111,11 +127,11 @@ server.post('/register', (req, res) => {
             User.insertOne(req.body, (err, result) => {
               assert.equal(err, null);
               userObj.user = result.ops[0];
-              userObj.msg = 'Register success'
+              userObj.msg = 'Register success';
+              req.session.uId = userObj.user._id;
               res.status(200).json(userObj);
               // res.status(200).json(result.ops);
               // callback(result);
-
             });
           }
         })

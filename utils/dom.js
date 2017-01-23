@@ -75,3 +75,24 @@ module.exports = {
     element && this.addClass(element, activeClassName);
   }
 };
+
+
+const removeSpace = (string) => {
+  let firstIndex = 0;
+  let lastIndex = 0;
+  if (string.length) {
+    const stringArr = string.split('');
+    stringArr.forEach((char, index) => {
+      if (char !== ' ') {
+        firstIndex = index;
+      }
+    })
+    for (var i = stringArr.length - 1; i >= 0; i--) {
+      if (stringArr[i] !== ' ') {
+        lastIndex = i;
+      }
+    }
+  }
+  return string.substring(firstIndex, lastIndex);
+}
+

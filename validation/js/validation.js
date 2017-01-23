@@ -2,8 +2,10 @@ const validateUsername = () => {
   const regex = /^[a-zA-Z0-9_]+$/;
   const username = $('#username').val();
   let errorMsg = '';
+  let isSuccess = false;
   if (regex.test(username)) {
     validateSuccess('username');
+    isSuccess = true;
   } else {
     validateError('username');
     if (!username) {
@@ -14,6 +16,8 @@ const validateUsername = () => {
   }
 
   $('.username .help-block').text(errorMsg);
+
+  return isSuccess;
 }
 
 
@@ -21,53 +25,62 @@ const validateEmail = () => {
   const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const email = $('#email').val();
   let errorMsg = '';
-  if(regex.test(email)) {
+  let isSuccess = false;
+  if (regex.test(email)) {
     validateSuccess('email');
-  }
-  else {
+    isSuccess = true;
+  } else {
     validateError('email');
-    if (!email){
+    if (!email) {
       errorMsg = 'Email is required';
-    }else {
+    } else {
       errorMsg = 'The format of email should be xxx@xx.com';
     }
   }
   $('.email .help-block').text(errorMsg);
+
+  return isSuccess;
 }
 
 const validatePassword = () => {
   const password = $('#password').val();
   let errorMsg = '';
-  if (password.length > 8){
-       validateSuccess('password');
-  }
-  else {
+  let isSuccess = false;
+  if (password.length > 4) {
+    validateSuccess('password');
+    isSuccess = true;
+  } else {
     validateError('password');
-    if (!password){
+    if (!password) {
       errorMsg = 'Password is required';
-    }else {
+    } else {
       errorMsg = 'The length of password should be more than 8';
     }
   }
   $('.password .help-block').text(errorMsg);
+
+  return isSuccess;
 }
 
 const comparePassword = () => {
   const confirmpassword = $('#confirm').val();
   const password = $('#password').val();
   let errorMsg = '';
-  if (confirmpassword===password){
+  let isSuccess = false;
+  if (confirmpassword && confirmpassword === password) {
     validateSuccess('confirm');
-  }
-  else {
+    isSuccess = true;
+  } else {
     validateError('confirm');
-    if(!confirmpassword){
+    if (!confirmpassword) {
       errorMsg = 'Confirm password is required';
-    }else {
+    } else {
       errorMsg = 'The password is different';
     }
   }
   $('.confirm .help-block').text(errorMsg);
+
+  return isSuccess;
 }
 
 const validateSuccess = (field) => {

@@ -50,68 +50,29 @@ const login = () => {
   })
 }
 
-const removeSpace = (string) => {
-  let firstIndex = 0;
-  let lastIndex = 0;
-  if (string.length) {
-    const stringArr = string.split('');
-    stringArr.forEach((char, index) => {
-      if (char !== ' ') {
-        firstIndex = index;
-      }
-    })
-    for (var i = stringArr.length - 1; i >= 0; i--) {
-      if (stringArr[i] !== ' ') {
-        lastIndex = i;
-      }
-    }
-  }
-  return string.substring(firstIndex, lastIndex);
-}
-
-console.log(removeSpace('  xx   hello world  dasda  '));
-
-// const register = () => {
-//   const username = $("#username").val();
-//   const password = $("#password").val();
-//   const newUser = {
-//     username,
-//     password
-//   }
-//   if (newUser) {
-//     $.post('/register', newUser, (data, status) => {
-//     })
-//   }
-// }
-
 const register = () => {
   const username = $("#username").val();
   const password = $("#password").val();
   const email = $("#email").val();
-  const newUser = {
-    username,
-    password,
-    email
-  }
+  const newUser = { username, password, email };
+  const isUsername = validateUsername();
+  const isEmail = validateEmail();
+  const isPassword = validatePassword();
+  const isConfirmPassword = comparePassword();
 
-  if (newUser) {
+  if (isUsername && isEmail && isPassword && isConfirmPassword) {
     $.post('/register', newUser, (data, status) => {
-      console.log(data);
       if (!data.user) {
-        alert(data.msg);
+        $('.responseMsg .help-block').text(data.msg);
       } else {
         // console.log(data);
         alert(data.msg);
-        window.location.href='/home';
+        window.location.href = '/home';
       }
-
     })
   }
 }
 
-
 const moveToLogin = () => {
-  window.location.href='/login';
+  window.location.href = '/login';
 }
-
-
